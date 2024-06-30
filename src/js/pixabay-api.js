@@ -10,5 +10,12 @@ export function getImage(tags) {
     safesearch: true,
   });
   const url = `${BASE_URL}${END_POINT}?${params}`;
-  return fetch(url).then(res => res.json().catch(error => console.log(error)));
+  return fetch(url).then(res =>
+    res.json().catch(error =>
+      iziToast.error({
+        title: 'Error',
+        message: 'Error',
+      })
+    )
+  );
 }
