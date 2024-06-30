@@ -15,6 +15,10 @@ export function getImage(tags) {
       iziToast.error({
         title: 'Error',
         message: 'Error',
+        position: 'center',
+        displayMode: 'once',
+        maxWidth: 500,
+        imageWidth: 600,
       })
     )
   );
